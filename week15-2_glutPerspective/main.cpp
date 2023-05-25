@@ -32,7 +32,9 @@ static void resize(int width, int height)
     glViewport(0, 0, width, height);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glFrustum(-ar, ar, -1.0, 1.0, 2.0, 100.0);
+    ///glFrustum(-ar, ar, -1.0, 1.0, 2.0, 100.0);
+    ///glOrtho(-ar*3, ar*3, -1.0*3, 1.0*3, 2.0, 100.0);
+    gluPerspective(60, ar, 0.01, 1000);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity() ;
